@@ -9,11 +9,11 @@ namespace RepeatExamS00199770
     class Equipment
     {
         public int ID;
-        public enum FuelType {Electrical, Battery, Petrol }
+        public enum FuelType { Electrical, Battery, Petrol }
         public string Name;
         public decimal Price;
         public string Description;
-
+        public List<Equipment> Tools {get; set;}
 
 
         public decimal AddVat(decimal productPrice)
@@ -33,7 +33,7 @@ namespace RepeatExamS00199770
     {
         public EquipmentData() : base("EquipmentData") { }
 
-        public DbSet<Price>
+        public DbSet<EquipmentData> Tools{ get; set; }
 
     }
 }
